@@ -1,7 +1,7 @@
 # PIFA: Physics-Informed Intent-Aware Human-Robot Collaborative Transportation With Forward-Looking Adaptation
 
 ## Overview
-This is the repository for the CoM-VLA project website.
+This is the repository for the PIFA project website.
 
 Author Names Omitted for Anonymous Review. Paper-ID [2889].
 
