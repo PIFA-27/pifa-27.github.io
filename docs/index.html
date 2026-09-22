@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="CoM-VLA: Coordinated Multi-Robot Vision-Language-Action Model for Decentralized Formation Reconfiguration">
-  <meta name="keywords" content="multi-robot navigation, vision-language-action model, formation reconfiguration, decentralized coordination">
+        content="PIFA: Physics-Informed Intent-Aware Human-Robot Collaborative Transportation With Forward-Looking Adaptation">
+  <meta name="keywords" content="human-robot collaboration, collaborative transportation, human intent inference, quadruped mobile manipulator, physics-informed learning, disturbance compensation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CoM-VLA: Coordinated Multi-Robot Vision-Language-Action Model for Decentralized Formation Reconfiguration</title>
+  <title>PIFA: Physics-Informed Intent-Aware Human-Robot Collaborative Transportation With Forward-Looking Adaptation</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -27,9 +27,9 @@
         <div class="column has-text-centered">
           <div class="column has-text-centered">
             <h1 class="title is-2 large-title">
-              <b>CoM-VLA</b>: Coordinated Multi-Robot
-              Vision-Language-Action Model for
-              Decentralized Formation Reconfiguration
+              <b>PIFA</b>: Physics-Informed Intent-Aware
+              Human-Robot Collaborative Transportation
+              With Forward-Looking Adaptation
             </h1>
           </div>
           <div class="is-size-5 publication-authors mt-0">
@@ -39,14 +39,14 @@
 
           <div class="is-size-6 publication-authors">
             <span class="author-block">
-              Paper-ID [1881]</span>
+              Paper-ID [2889]</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="./static/pdf/CoMVLA_main.pdf"
+                <a href="./static/pdf/ICRA_2027_HRC-2.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -58,19 +58,6 @@
               </span>
               <!--/ PDF Link. -->
 
-              <!-- Supp Link. -->
-              <span class="link-block">
-                <a href="./static/pdf/CoMVLA_Supplementary.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-                    </svg>
-                  </span>
-                  <span>Supplementary</span>
-                </a>
-              </span>
-              <!--/ Supp Link. -->
 
               <!-- Video Link. -->
               <!-- <span class="link-block">
@@ -113,11 +100,11 @@
 <!-- <section class="hero teaser" id="video">
   <div class="container is-max-desktop">
     <video class="teaser-video" controls muted playsinline preload="metadata">
-      <source src="./static/videos/CoMVLA_Supplementary_Video.mp4" type="video/mp4">
+      <source src="./static/videos/PIFA_Supplementary_Video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <p class="video-caption">
-      CoM-VLA experimental video.
+      PIFA experimental video.
     </p>
   </div>
 </section> -->
@@ -131,25 +118,27 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Coordinated navigation is a fundamental capability for robot teams operating
-            in complex environments. To achieve effective team behavior, robots often need to
-            maintain and adapt different formations across diverse environments. Existing
-            approaches often rely on prior environmental information, limiting their
-            adaptability during formation reconfiguration. Vision-Language-Action (VLA) models
-            unify visual perception, reasoning, and action generation, but remain primarily
-            focused on single-robot navigation, leaving decentralized multi-robot navigation
-            with adaptive formation control largely unexplored. To address these challenges,
-            we introduce Coordinated Multi-Robot VLA (CoM-VLA), an approach for decentralized
-            navigation with adaptive formation reconfiguration. CoM-VLA grounds formation
-            instructions in visually inferred environmental constraints and feasible
-            formations, and learns instruction-grounded adaptive communication to construct
-            team-aware representations. Each robot then independently executes a shared VLA
-            policy conditioned on its local information and team-aware representation. CoM-VLA
-            is initialized from a pretrained single-robot navigation backbone and trained
-            end-to-end through imitation learning. Experiments in simulation and on physical
-            robots demonstrate that CoM-VLA enables decentralized multi-robot navigation with
-            adaptive formation reconfiguration while maintaining high navigation success and
-            formation accuracy.
+            Accurate human-intent following is a fundamental capability for quadruped
+            mobile manipulators in collaborative payload transportation. Existing methods
+            typically infer human intent using direct force sensing or accurate dynamic
+            models, and compensate for disturbances reactively after their effects appear
+            in the robot state. However, two key challenges remain underexplored. First,
+            human intent must be distinguished from non-intent forces, such as external
+            disturbances, using only proprioceptive observations while maintaining
+            consistency with whole-body dynamics. Second, disturbances should be
+            compensated for before they cause deviations from the intended collaborative
+            motion. To address these, we propose Physics-Informed and Forward-looking
+            Adaptation (PIFA), an approach for collaborative transportation. PIFA encodes
+            proprioceptive histories to capture temporal motion and interaction context
+            and jointly predicts human motion intent, interaction wrench, non-intent
+            forces, and the future robot state. These predictions are constrained by the
+            robot's whole-body dynamics to promote physical consistency. PIFA further
+            converts the predicted intent into coordinated leg and arm commands while
+            using the predicted non-intent forces and future state to compensate for
+            disturbances. Extensive experiments in simulation and on physical robots
+            demonstrate that PIFA enables more accurate human-intent tracking and force
+            estimation while substantially reducing end-effector interaction forces under
+            payload variations and external disturbances compared with existing methods.
           </p>
         </div>
       </div>
@@ -162,9 +151,9 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{anonymous2027comvla,
+    <pre><code>@inproceedings{anonymous2027pifa,
   author    = {Anonymous},
-  title     = {CoM-VLA: Coordinated Multi-Robot Vision-Language-Action Model for Decentralized Formation Reconfiguration},
+  title     = {Physics-Informed Intent-Aware Human-Robot Collaborative Transportation With Forward-Looking Adaptation},
   year      = {2027}
 }</code></pre>
   </div>
