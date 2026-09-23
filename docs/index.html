@@ -60,7 +60,7 @@
 
               <!-- Supp Link. -->
               <span class="link-block">
-                <a href="./static/pdf/PIFA_Supplementary.pdf"
+                <a href="./static/pdf/PIFA_appendix.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -158,6 +158,40 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="section appendix-section" id="appendix">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3">Supplementary Material</h2>
+        <div class="content has-text-justified">
+          <p>
+            The supplementary material provides the implementation, training, and
+            execution details of PIFA:
+          </p>
+          <ul>
+            <li>I. Implementation Details &mdash; encoder-decoder architecture with the
+              forward dynamics predictor, proprioceptive observation space, and
+              whole-body dynamics evaluation</li>
+            <li>II. Training Details &mdash; data collection in simulation, human motion
+              primitives, and training setup</li>
+            <li>III. Execution Details &mdash; deployment on the physical robot, control
+              rates, and adaptive law parameters</li>
+          </ul>
+        </div>
+        <div class="appendix-embed">
+          <iframe src="./static/pdf/PIFA_appendix.pdf" title="PIFA Supplementary Material"
+                  loading="lazy"></iframe>
+        </div>
+        <p class="has-text-centered mt-3">
+          <a href="./static/pdf/PIFA_appendix.pdf" target="_blank" rel="noopener">
+            Open the supplementary material in a new tab
+          </a>
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
